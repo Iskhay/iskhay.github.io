@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     font-family: 'Open Sans'; }
 
     body {
         font-family: 'Open Sans', sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
     }
+    
     
     header {
         background: url(imagen/header.jpg);
@@ -26,38 +30,65 @@
             -webkit-text-stroke-color: black;
         
     }
-    .contenedor {
-        max-width: 12000px;
-        padding: 12px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        contain: paint;
-    }
-    
-    .contenedor-items {
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(space-between, minmax(220px, 1fr));
-        grid-gap: 30px;
-        grid-row-gap: 30px;
-        width: 100%;
-        transition: 3s;
-    }
-    
 
-    .item {
-        max-width: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax 200px,1fr);
-       grid-gap: 30px;
-       grid-row-gap: 30px;
-       width: 100%;
-       transition: 0.5s;
-       
-    }
 
-.contenedor-items:hover {
-    background-color: bisque;
+.contenedor {
+    max-width: 1200px;
+    padding: 12px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
 }
- 
+
+.contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Corregido el valor de repeat */
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: 3s;
+}
+
+.item {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    transition: all 0.3s ease;
+        width: calc(100% / 3 - 20px); }
+      
+        .item:last-child {
+            margin-bottom: 0; /* Eliminar el margen inferior del último elemento dentro de cada contenedor */
+        }
+    
+    
+
+
+.item:hover {
+    border-color: #000;
+    transform: scale(1.05);
+}
+
+.item h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+}
+
+.item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+.boton-item
+{
+    color: rgb(255, 255, 255);
+    text-shadow: #000;
+    border-color: #000;
+    background-color: forestgreen;
+    margin-bottom: 0;
+
+}
